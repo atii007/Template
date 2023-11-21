@@ -1,0 +1,322 @@
+
+*{
+    font-family: Verdana,sans-serif;;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* CSS for the navigation menu */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.nav-items {
+    padding: 8px 16px;
+    font-size: 15px;
+    letter-spacing: 4px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.nav-items:hover {
+    background-color: lightgray;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+}
+
+.banner {
+    max-width: 1500px;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-mid {
+    position: absolute;
+    top: 48%;
+    left: 39%;
+}
+
+span {
+    color: #f1f1f1!important;
+    letter-spacing: 4px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.bold {
+    background-color: black;
+    opacity: 0.75;
+    padding: 8px 16px;
+}
+
+/* CSS for the hamburger icon and responsive design */
+.nav-toggle {
+display: none;
+cursor: pointer;
+}
+
+.hamburger-icon {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 30px;
+height: 20px;
+cursor: pointer;
+}
+
+.bar {
+width: 100%;
+height: 3px;
+background-color: #333;
+transition: 0.4s;
+}
+.nav-list {
+display: flex;
+}
+/* DropDown List fro mobile responsive */
+@media screen and (max-width: 768px) {
+    .nav-list {
+    display: none;
+    
+    }
+    
+    .nav-toggle {
+    display: flex;
+    }
+    
+    .nav-toggle.active + .nav-list {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    text-align: center;
+    }
+    .banner-mid {
+    left: 50%; 
+    transform: translateX(-50%); 
+    }
+    
+    .banner-mid span:last-child {
+    display: none; 
+    }
+    }
+span{
+    color: #f1f1f1!important;
+    letter-spacing: 4px;
+    font-family: "Segoe UI",Arial,sans-serif;;
+    font-size: 36px;
+    font-weight: 400;
+}
+.bold{
+    background-color: black;
+    opacity: 0.75;
+    padding: 8px 16px;
+}
+/* styling for projects section */
+.gallery {
+    padding: 32px;
+}
+
+.gallery-items {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+h3 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    justify-items: center;
+    margin-top: 32px;
+}
+
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.grid-item .item-title {
+    padding: 8px 16px;
+    font-size: 15px;
+    position: absolute;
+    width: fit-content;
+    background-color: black;
+    color: white;
+}
+
+/* Media query for smaller screens (tablets and mobiles) */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 460px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item {
+        width: 100%;
+        height: auto;
+    }
+}
+  
+/* CSS for About Section */
+
+.grid-item p{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.opacity{
+    opacity: 0.60;
+}
+.grid-item button{
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+.grid-item button:hover{
+    background-color: lightgray;
+}
+/* Contact Section Styling */
+form{
+    width: 100%;
+}
+.form-items input{
+    border: 1px solid #ccc!important;
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+form button{
+    color: #fff;
+    background-color: #000;
+    border: none;
+    font-size: 15px;
+    padding: 12px 32px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form button:hover{
+    background-color: lightgray;
+    color: #000;
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+/* Styling for Footer Portion of the Template */
+.footer{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-sec{
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+.footer-menu-items{
+    color: #fff;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-menu-items a{
+    color: #fff;
+    text-decoration: none;
+
+}
+.footer-menu-items button{
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+}
+.footer-menu-items input{
+    border: 1px solid #ccc!important;
+    padding: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.footer-logo-sec{
+    display: block;
+    text-align: center;
+}
+i{
+    font-size: 28px;
+    margin: 10px;
+}
+i:hover{
+    color:lightgray;
+}
+@media (max-width: 460px) {
+    .footer {
+        background-color: #000;
+        width: 100%;
+        display: block;
+    }
+    .footer-sec{
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .footer-sec{
+        width: 100%;
+    }
+}
